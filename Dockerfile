@@ -2,6 +2,6 @@ FROM openjdk:17-jdk-slim
 
 WORKDIR /app
 
-COPY target/inventory-service.jar app.jar
+COPY target/inventory-service-0.0.1-SNAPSHOT.jar app.jar
 
 ENTRYPOINT ["java","-jar","/app/app.jar"]
