@@ -1,12 +1,6 @@
-server:
-  port: 8084
-
 spring:
   profiles:
-    active: local
-
-  application:
-    name: inventory-service
+    active: docker
 
   config:
     import: optional:configserver:http://localhost:8888
