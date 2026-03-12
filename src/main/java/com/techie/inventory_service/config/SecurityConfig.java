@@ -19,7 +19,7 @@ public class SecurityConfig {
         http
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(auth -> auth
-                    .requestMatchers("/inventory/**").permitAll()
+                    .requestMatchers("/inventory/**", "/actuator/**" ).permitAll()
                     .anyRequest().authenticated()
             );
 
