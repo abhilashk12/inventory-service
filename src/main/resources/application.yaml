@@ -4,11 +4,29 @@ server:
 spring:
   application:
     name: inventory-service
+  profiles:
+    active: local
 
   config:
-    import: optional:configserver:${CONFIG_SERVER_URL}
+    import: optional:configserver:http://localhost:8888
 
 eureka:
   client:
     service-url:
-      defaultZone: ${EUREKA_URL}
+      defaultZone: ${EUREKA_URL:http://discovery-server:8761/eureka}
+
+#this is for AWS
+#server:
+#  port: 8084
+#
+#spring:
+#  application:
+#    name: inventory-service
+#
+#  config:
+#    import: optional:configserver:${CONFIG_SERVER_URL}
+#
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: ${EUREKA_URL}

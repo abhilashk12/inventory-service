@@ -1,6 +1,7 @@
 package com.techie.inventory_service.controller;
 
 import com.techie.inventory_service.service.InventoryService;
+import com.techie.inventory_service.service.InventoryServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

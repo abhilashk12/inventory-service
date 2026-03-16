@@ -3,13 +3,15 @@ package com.techie.inventory_service.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDateTime;
+
 @Entity
+@Table(name = "inventory")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Table(name = "inventory")
 public class Inventory {
 
     @Id
@@ -19,4 +21,8 @@ public class Inventory {
     private Long productId;
 
     private Integer quantity;
+
+    private LocalDateTime createdAt;
+
+    private LocalDateTime updatedAt;
 }
