@@ -61,7 +61,4 @@ public class OrderConsumer {
         }
     }
 
-    public void getDetails(){
-        
-    }
 }
