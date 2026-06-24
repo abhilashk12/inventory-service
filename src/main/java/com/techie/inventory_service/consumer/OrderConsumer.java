@@ -60,4 +60,8 @@ public class OrderConsumer {
             inventoryProducer.publishInventoryEvent(inventoryEvent);
         }
     }
+
+    public void getDetails(){
+        
+    }
 }
