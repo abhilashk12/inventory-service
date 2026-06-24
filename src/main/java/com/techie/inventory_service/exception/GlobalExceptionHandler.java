@@ -39,4 +39,19 @@ public class GlobalExceptionHandler {
                 HttpStatus.BAD_REQUEST
         );
     }
+
+    @ExceptionHandler(NotEnoughInventoryException.class)
+    public ResponseEntity<ErrorResponse> handleInventory(NotEnoughInventoryException ex) {
+
+        log.error(ex.getMessage());
+
+        return new ResponseEntity<>(
+                new ErrorResponse(
+                        ex.getMessage(),
+                        HttpStatus.BAD_REQUEST.value(),
+                        LocalDateTime.now()
+                ),
+                HttpStatus.BAD_REQUEST
+        );
+    }
 }
