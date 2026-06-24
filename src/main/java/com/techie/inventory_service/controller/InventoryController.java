@@ -31,4 +31,13 @@ public class InventoryController {
         inventoryService.reduceStock(productId, quantity);
         return ResponseEntity.ok("Stock updated");
     }
+
+    // @PostMapping("/reduceStock")
+    // public ResponseEntity<String> reduceStock(
+    //         @RequestParam Long productId,
+    //         @RequestParam Integer quantity) {
+
+    //     inventoryService.reduceStock(productId, quantity);
+    //     return ResponseEntity.ok("Stock updated");
+    // }
 }
